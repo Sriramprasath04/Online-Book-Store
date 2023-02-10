@@ -1,0 +1,198 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+/* Removal of Default Style */
+/* =============================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans';
+}
+body{
+   
+    
+}
+:root{
+    --Primary: #00203FFF;
+    --Secondary: white;
+    --Third: rgba(0, 0, 0, 0.79);
+}
+/* =============================================== */
+/* ===================/ Nav-top \================== */
+.nav-top{
+    display: flex;
+    padding: 3px 8px 5px 8px;
+    justify-content: space-between;
+        
+}
+
+.header-content{
+    background-color: var(--Primary);
+}
+.fa-solid, .hed {
+    color: var(--Secondary);
+}
+
+/* Tittle  */
+.title-space{
+    display: flex;
+    margin: 0 0 0 30px;
+    
+}
+.tittle{
+    flex-direction: column;
+    inline-size: 155px; /* inline-size is used to reduce the block size here ref:https://developer.mozilla.org/en-US/docs/Web/CSS/block-size */
+    text-align: center;
+    padding-top: 10px;
+}
+.tittle h1{
+    font-size: 1.7rem;
+}
+.tittle p{
+    font-size: 1rem;
+    color: var(--Secondary);
+}
+.tittle p span{
+    color: rgb(250, 250, 64);
+}
+/* ------------------------------------------------- */
+
+/* Icons */
+.i{
+    font-size: 2em;
+    margin: 20px 4px 0 1rem;
+}
+.icons {
+    display: flex;
+}
+.ic {
+    padding: 7px;
+    margin: 27px 1rem 0 1rem;
+}
+/* ------------------------------------------------- */
+
+/* Search */
+.search{
+
+ margin: 25px;
+ left: 30%;  
+}
+.search input{
+    height: 30px;
+    max-width: 400px;
+    min-width: 300px;
+    text-align: center;
+}
+.search-icon{
+    padding: 4px;
+}
+/* ------------------------------------------------- */
+
+/* Cart */
+.cart{
+    display: flex;
+}
+.cart p{
+    padding: 0 0 4px 4px ;
+}
+/* ================================================= */
+
+/* Footer Style */
+.footer-content{
+    background-color: var(--Primary);
+    display: flex;
+    min-height: 10rem;
+    
+}
+.footer-content a{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: var(--Secondary);
+}
+.footer-content h4,.footer-content p{
+    color: gray;
+}
+.links-box{
+    display: flex;
+    /* padding: 22px 50px 22px 50px; */
+    margin: 20px 4% 10px 4%;
+}
+.set2,.set1,.set3{
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 2% 0px 2%;
+    margin: 20px 2% 0px 4%;
+    min-width: 200px;
+}
+.set{
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 2% 0px 2%;
+    margin: 10px 2% 0px 2%;
+    min-width: 200px;
+    align-items: center;
+}
+.set li,.set3 a{
+    padding: 7px;
+    color: var(--Secondary);
+}
+/* ------------------------------------------------- */
+
+/* Footer Image */
+.footer-image{
+    height: 200px;
+    width: 200px;
+}
+.footer-content img{
+    margin: 0px 4% 0px 6%;
+}
+/* ------------------------------------------------- */
+
+/* Copyrights */
+.copyrights{
+    text-align: center;
+    padding: 3px;
+}
+/* ================================================== */
+
+/* Main */
+
+/* Offers */
+.slide img{
+    width: 100%; 
+}
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+.prev,.next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bolder;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    color: var(--Secondary);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+.prev:hover, .next:hover {
+    background-color: gray;
+  }
+/* Products */
+  /* Box */
+ 
