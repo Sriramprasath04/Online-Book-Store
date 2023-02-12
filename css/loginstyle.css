@@ -5,18 +5,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --Primary: #00203FFF;
+    --Secondary: white;
+    --Third: rgba(0, 0, 0, 0.79);
+}
+
 main{
     width: 100vw;
     height: 100vh;
-    background-color: #E8EAED;
+    background-color: var(--Primary);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .container{
-    width: 850px;
-    height: 600px;
-    background-color: white;
+    width: 900px;
+    height: 580px;
+    background-color: var(--Secondary);
     display: flex;
     border-radius: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -28,7 +35,7 @@ main{
 } 
 img{
     height: 70%;
-    margin: 45% 10% 5% 10%;
+    margin: 34% 0 5% 0;
     width: 100%;
 } 
 .content{
@@ -51,12 +58,13 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 6rem 1rem 1rem 8rem;
+    margin: 2rem 1rem 1rem 8rem;
 }
 
 input[type=email]{
     width: 100%;
-    padding: 15px 30px;
+    padding: 15px 28px;
+
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -74,12 +82,22 @@ input[type=password]{
     box-sizing: border-box;
 }
 
+input[type=text]{
+    width: 100%;
+    padding: 15px 28px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 input[type=submit] {
     width: 100%;
     background-color: #4CAF50;
-    color: white;
+    color:var(--Secondary);
     padding: 14px 10px;
-    margin: 20px 50px;
+    margin: 2rem 50px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -96,7 +114,9 @@ input[type=submit]:hover {
 .form{
     align-items: center;
     justify-content: center;
-    padding: 2rem 0 0 100px ;
+    padding: 0 0 0 100px ;
+    position: relative;
+    top: 1rem;
 }
 .newuser{
     margin: 0 0 0 7rem;
