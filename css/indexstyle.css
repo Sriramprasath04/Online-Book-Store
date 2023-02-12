@@ -21,11 +21,16 @@ body{
 }
 /* =============================================== */
 /* ===================/ Nav-top \================== */
+header{
+    width: 100%;
+    /* position: fixed;
+    z-index: 10000; */
+}
 .nav-top{
     display: flex;
     padding: 3px 8px 5px 8px;
     justify-content: space-between;
-        
+    height: 5rem;
 }
 
 .header-content{
@@ -38,9 +43,8 @@ body{
 /* Tittle  */
 .title-space{
     display: flex;
-    margin: 0 0 0 30px;
-    
 }
+
 .tittle{
     flex-direction: column;
     inline-size: 155px; /* inline-size is used to reduce the block size here ref:https://developer.mozilla.org/en-US/docs/Web/CSS/block-size */
@@ -57,6 +61,7 @@ body{
 .tittle p span{
     color: rgb(250, 250, 64);
 }
+
 /* ------------------------------------------------- */
 
 /* Icons */
@@ -68,8 +73,15 @@ body{
     display: flex;
 }
 .ic {
+    cursor: pointer;
     padding: 7px;
     margin: 27px 1rem 0 1rem;
+}
+.ic:hover,.cart:hover{
+    color: gray;
+}
+.hed{
+    cursor: pointer;
 }
 /* ------------------------------------------------- */
 
@@ -89,7 +101,6 @@ body{
     padding: 4px;
 }
 /* ------------------------------------------------- */
-
 /* Cart */
 .cart{
     display: flex;
@@ -100,12 +111,15 @@ body{
 /* ================================================= */
 
 /* Footer Style */
+footer{
+    min-height: 10rem;
+    margin-top: auto;
+}
 .footer-content{
     background-color: var(--Primary);
     display: flex;
-    min-height: 10rem;
+    height: 100%;
     justify-content: space-around;
-    
 }
 .footer-content a{
     font-family: 'Times New Roman', Times, serif;
@@ -129,6 +143,11 @@ body{
     flex-direction: column;
 }
 
+.l{
+    padding: 2px;
+    line-height: 1.5;
+}
+
 .set,.set3{
     position: relative;
     top: 2rem;
@@ -149,8 +168,10 @@ footer img{
 
 /* Copyrights */
 .copyrights{
+    position: relative;
     text-align: center;
     padding: 3px;
+    background-color: var(--Secondary);
 }
 /* ================================================== */
 
@@ -168,7 +189,7 @@ footer img{
 .prev,.next{
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 60%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
@@ -186,23 +207,205 @@ footer img{
   }
   
 .prev:hover, .next:hover {
-    background-color: gray;
+    background-color: var(--Primary);
   }
-/* Products */
-  /* Box */
- .products{
-    height: 15rem;
+/*services*/
+
+.services{
     width: 100%;
-    background-color: wheat;
- }
-.categories{
-    display: flex;
-    margin: 0 1px 2px 1px;
+    height: auto;
+    margin: 35px 0;
 }
 
-.box{
-    height: 17rem;
-    width: 15rem;
-    margin: 2px;
-    background-color: blueviolet;
+.services .services_box{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.services .services_box .services_card{
+    text-align: center;
+    width: 310px;
+    height: auto;
+    padding: 15px 10px;
+}
+
+.services .services_box .services_card i{
+    color: var(--Primary);
+    font-size: 45px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.services .services_box .services_card h3{
+    margin-bottom: 10px;
+}
+
+  /* Products */
+ /*Books*/
+
+.featured_boks{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.featured_boks h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+
+.featured_boks .featured_book_box{
+    width: 95%;
+    height: 75vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.featured_boks .featured_book_box .featured_book_card{
+    width: 250px;
+    height: 420px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #919191;
+    margin: auto 20px;
+}
+
+.featured_boks .featured_book_box .featured_book_card:hover{
+    box-shadow: 0 0 5px var(--Primary);
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_img img{
+    width: 150px;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag h2{
+    margin: 12px;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .writer{
+    color: #919191;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .categories{
+    color: var(--Primary);
+    margin-top: 8px;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .book_price{
+    margin-top: 8px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .book_price sub{
+    font-weight: 100;
+    padding: 0 5px;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .f_btn{
+    padding: 8px 20px;
+    border: 2px solid var(--Primary);
+    text-decoration: none;
+    color: #000;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--Primary);
+    border-radius: 10px;
+}
+/*arrivals*/
+
+.arrivals{
+    width: 100%;
+    height: 124vh;
+    margin-bottom: 35px;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.arrivals h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.arrivals .arrivals_box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 25px 0;
+}
+
+.arrivals .arrivals_box .arrivals_card{
+    width: 250px;
+    height: 340px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #919191;
+    margin: auto 20px;
+}
+
+.arrivals .arrivals_box .arrivals_card:hover{
+    box-shadow: 0 0 5px var(--Primary);
+}
+.a{
+    color: var(--Primary);
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_image{
+    width: 150px;
+    height: 220px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.arrivals .arrivals_box .arrivals_card:hover .arrivals_image img{
+    transform: scale(1.1);
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tag p{
+    font-family: queen of camelot;
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tag .arrivals_icon{
+    color: var(--Primary);
+    margin-bottom: 18px;
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tag .arrivals_btn{
+    padding: 8px 20px;
+    border: 2px solid var(--Primary);
+    text-decoration: none;
+    color: #000;
 }
